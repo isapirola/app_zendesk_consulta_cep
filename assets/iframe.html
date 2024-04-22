@@ -13,25 +13,25 @@
 <body ng-app="app" ng-controller="AppController">
   <div id="container">
 
-    <h1 id="title">Consulta CEP</h1>
-    <form ng-submit="pesquisaCEP()">
-      <div class="form-item">
-        <label for="cep" id="label">Digite o CEP:</label>
-        <input type="text" ng-model="cep" id="cep" required />
-      </div>
-      <div>
-        <button type="submit" id="search">Pesquisar</button>
-      </div>
-    </form>
+    <h2 id="title">Consulta CEP</h1>
+      <form ng-submit="pesquisaCEP()">
+        <div class="form-item">
+          <label for="cep" id="label">Digite o CEP:</label>
+          <input type="text" ng-model="cep" id="cep" required />
+        </div>
+        <div>
+          <button type="submit" id="search">Pesquisar</button>
+        </div>
+      </form>
 
-    <div id="results" ng-if="cepData">
-      <p class="result">CEP: {{ cepData.cep }}</p>
-      <p class="result">Logradouro: {{ cepData.logradouro }}</p>
-      <p class="result">Complemento: {{ cepData.complemento }}</p>
-      <p class="result">Bairro: {{ cepData.bairro }}</p>
-      <p class="result">Cidade: {{ cepData.localidade }}</p>
-      <p class="result">Estado: {{ cepData.uf }}</p>
-    </div>
+      <div id="results" ng-if="cepData">
+        <p class="result">CEP: {{ cepData.cep }}</p>
+        <p class="result">Logradouro: {{ cepData.logradouro }}</p>
+        <p class="result">Complemento: {{ cepData.complemento }}</p>
+        <p class="result">Bairro: {{ cepData.bairro }}</p>
+        <p class="result">Cidade: {{ cepData.localidade }}</p>
+        <p class="result">Estado: {{ cepData.uf }}</p>
+      </div>
 
   </div>
 
@@ -39,6 +39,12 @@
   <script src="controllers/app.controller.js" type="text/javascript"></script>
   <script src="service/zendesk.service.js"></script>
   <script src="https://static.zdassets.com/zendesk_app_framework_sdk/2.0/zaf_sdk.min.js"></script>
+  <script>
+    // Initialise Apps framework client. See also:
+    // https://developer.zendesk.com/apps/docs/developer-guide/getting_started
+    var client = ZAFClient.init();
+    client.invoke('resize', { width: '100%', height: '500px' });
+  </script>
 </body>
 
 </html>
