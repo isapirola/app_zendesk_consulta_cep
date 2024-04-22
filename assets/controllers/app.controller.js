@@ -4,4 +4,5 @@ app.controller("app", [
     function ($scope, zendeskService) {
         var client = ZAFClient.init();
     },
+    ($scope.pesquisaCEP = function () {}),
 ]);
