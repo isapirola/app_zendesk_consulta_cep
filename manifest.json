@@ -1,9 +1,8 @@
 {
-    "name": "Hello World",
+    "name": "Consulta CEP",
     "author": {
-        "name": "Via Consulting - Isabela",
-        "email": "suporte@viaconsulting.com.br",
-        "url": ""
+        "name": "Isabela Pirola",
+        "email": "isabela.pirola@viaconsulting.com.br"
     },
     "defaultLocale": "en",
     "private": true,
