@@ -14,7 +14,8 @@ p {
 }
 
 #container {
-    margin: 40px 60px;
+    margin: 40px 20px;
+    width: 100%;
 }
 
 #title {
@@ -35,7 +36,7 @@ p {
 }
 
 #cep {
-    height: 24px;
+    padding: 5px;
     margin-top: 6px;
     margin-bottom: 20px;
     border: 1px solid gray;
@@ -46,12 +47,15 @@ p {
     padding: 8px 16px;
     font-weight: bold;
     background: none;
-    color: palevioletred;
-    border: 2px solid palevioletred;
+    color: #ce396e;
+    border: 2px solid #ce396e;
     border-radius: 5px;
 }
 
 #search:hover {
+    background-color: #ffe7ef;
+    color: #b11e53;
+    border-color: #b11e53;
     cursor: pointer;
 }
 
@@ -59,12 +63,13 @@ p {
     margin-top: 40px;
     font-size: 15px;
 }
-
-.result {
-    display: flex;
-    margin-top: 5px;
+table {
+    width: 100%;
 }
 
-.result-text {
-    margin-left: 4px;
+th,
+td {
+    text-align: left;
+    border-bottom: 1px solid #ea6293;
+    padding: 3px 5px;
 }

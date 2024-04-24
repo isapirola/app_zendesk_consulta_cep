@@ -17,7 +17,7 @@
       <form ng-submit="pesquisaCEP()">
         <div class="form-item">
           <label for="cep" id="label">Digite o CEP:</label>
-          <input type="text" ng-model="cep" id="cep" required />
+          <input type="number" ng-model="cep" id="cep" placeholder="Apenas números" required />
         </div>
         <div>
           <button type="submit" id="search">Pesquisar</button>
@@ -25,12 +25,35 @@
       </form>
 
       <div id="results" ng-if="cepData">
-        <p class="result">CEP: {{ cepData.cep }}</p>
-        <p class="result">Logradouro: {{ cepData.logradouro }}</p>
-        <p class="result">Complemento: {{ cepData.complemento }}</p>
-        <p class="result">Bairro: {{ cepData.bairro }}</p>
-        <p class="result">Cidade: {{ cepData.localidade }}</p>
-        <p class="result">Estado: {{ cepData.uf }}</p>
+        <table>
+          <tbody>
+            <tr>
+              <th scope="row">CEP</th>
+              <td>{{ cepData.cep }}</td>
+            </tr>
+            <tr>
+              <th scope="row">Logradouro</th>
+              <td>{{ cepData.logradouro }}</td>
+            </tr>
+            <tr>
+              <th scope="row">Complemento</th>
+              <td>{{ cepData.complemento }}</td>
+            </tr>
+            <tr>
+              <th scope="row">Bairro</th>
+              <td>{{ cepData.bairro }}</td>
+            </tr>
+            <tr>
+              <th scope="row">Localidade</th>
+              <td>{{ cepData.localidade }}</td>
+            </tr>
+            <tr>
+              <th scope="row">UF</th>
+              <td>{{ cepData.uf }}</td>
+            </tr>
+          </tbody>
+        </table>
+
       </div>
 
   </div>
