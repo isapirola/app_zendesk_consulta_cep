@@ -14,7 +14,7 @@ p {
 }
 
 #container {
-    margin: 40px 20px;
+    margin: 20px 20px;
     width: 100%;
 }
 
@@ -36,7 +36,7 @@ p {
 }
 
 #cep {
-    padding: 5px;
+    padding: 8px 5px;
     margin-top: 6px;
     margin-bottom: 20px;
     border: 1px solid gray;
