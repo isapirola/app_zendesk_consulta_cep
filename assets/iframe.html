@@ -13,48 +13,50 @@
 <body ng-app="app" ng-controller="AppController">
   <div id="container">
 
-    <h2 id="title">Consulta CEP</h1>
-      <form ng-submit="pesquisaCEP()">
-        <div class="form-item">
-          <label for="cep" id="label">Digite o CEP:</label>
-          <input type="text" ng-model="cep" id="cep" placeholder="Apenas números" required />
-        </div>
-        <div>
-          <button type="submit" id="search">Pesquisar</button>
-        </div>
-      </form>
-
-      <div id="results" ng-if="cepData">
-        <table>
-          <tbody>
-            <tr>
-              <th scope="row">CEP</th>
-              <td>{{ cepData.cep }}</td>
-            </tr>
-            <tr>
-              <th scope="row">Logradouro</th>
-              <td>{{ cepData.logradouro }}</td>
-            </tr>
-            <tr>
-              <th scope="row">Complemento</th>
-              <td>{{ cepData.complemento }}</td>
-            </tr>
-            <tr>
-              <th scope="row">Bairro</th>
-              <td>{{ cepData.bairro }}</td>
-            </tr>
-            <tr>
-              <th scope="row">Localidade</th>
-              <td>{{ cepData.localidade }}</td>
-            </tr>
-            <tr>
-              <th scope="row">UF</th>
-              <td>{{ cepData.uf }}</td>
-            </tr>
-          </tbody>
-        </table>
-
+    <h2 id="title">Consulta CEP</h2>
+    <form ng-submit="pesquisaCEP()">
+      <div class="form-item">
+        <label for="cep" id="label">Digite o CEP:</label>
+        <input type="text" ng-model="cep" id="cep" placeholder="Apenas números" required />
       </div>
+      <div>
+        <button type="submit" id="search">Pesquisar</button>
+      </div>
+    </form>
+
+    <div id="error-message" ng-if="errorMessage">{{ errorMessage }}</div>
+
+    <div id="results" ng-if="cepData && !isEmptyObject(cepData)">
+      <table>
+        <tbody>
+          <tr>
+            <th scope="row">CEP</th>
+            <td>{{ cepData.cep }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Logradouro</th>
+            <td>{{ cepData.logradouro }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Complemento</th>
+            <td>{{ cepData.complemento }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Bairro</th>
+            <td>{{ cepData.bairro }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Localidade</th>
+            <td>{{ cepData.localidade }}</td>
+          </tr>
+          <tr>
+            <th scope="row">UF</th>
+            <td>{{ cepData.uf }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
 
   </div>
 

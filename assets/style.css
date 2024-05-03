@@ -59,6 +59,12 @@ p {
     cursor: pointer;
 }
 
+#error-message {
+    margin-top: 30px;
+    font-size: 16px;
+    color: #b11e53;
+}
+
 #results {
     margin-top: 40px;
     font-size: 15px;
