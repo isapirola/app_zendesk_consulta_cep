@@ -15,12 +15,12 @@
 
     <h2 id="title">Consulta CEP</h2>
     <form ng-submit="pesquisaCEP()">
-      <div class="form-item">
-        <label for="cep" id="label">Digite o CEP:</label>
-        <input type="text" ng-model="cep" id="cep" placeholder="Apenas números" required />
-      </div>
       <div>
-        <button type="submit" id="search">Pesquisar</button>
+        <label for="cep" id="label">Digite o CEP:</label>
+        <div id="input-and-button">
+          <input type="text" ng-model="cep" id="cep" placeholder="Apenas números" required />
+          <button type="submit" id="search">Pesquisar</button>
+        </div>
       </div>
     </form>
 
